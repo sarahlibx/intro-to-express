@@ -90,6 +90,7 @@ app.get('/shoes', (req, res) => {
         results = results.filter(shoe => shoe.type === type);
     }
 
+    // edge cases
     if (results.length === 0) {
         return res.send('No shoes match your search.');
   }
@@ -101,4 +102,4 @@ app.get('/shoes', (req, res) => {
 // Listen for requests on port 3000
 app.listen(3000, () => {
   console.log('Listening on port 3000')
-})
+});
